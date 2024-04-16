@@ -1,4 +1,4 @@
-package com.example.cloud
+package com.example.cloud.components
 
 object Constants {
     const val REQUEST_CODE = 0
