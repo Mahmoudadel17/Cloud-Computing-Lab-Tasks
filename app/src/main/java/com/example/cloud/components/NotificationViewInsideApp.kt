@@ -31,13 +31,14 @@ import com.example.cloud.ui.theme.colorList
 
 @Composable
 fun NotificationView(
-    title:String,
-    message:String
+    title: String,
+    message: String,
+    dateTime: String
 ) {
     Row (
         modifier = Modifier.padding(8.dp).fillMaxSize().clip(RoundedCornerShape(16.dp)).background(ComponentBackgroundColor).padding(12.dp),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Center
+        horizontalArrangement = Arrangement.Start
     ){
         Image(
             painter = painterResource(id = R.drawable.cloud),
@@ -57,10 +58,17 @@ fun NotificationView(
                     }
                     i++
                 } },
-                color = Color(0xFFC9CBCC)
 
             )
             Text(text = message, color = Color(0xFFC9CBCC))
+
+//            dateTime?.let {
+//                Text(
+//                    text = dateTime,
+//                    modifier = Modifier
+//                        .padding(vertical = 8.dp)
+//                )
+//            }
 
         }
 

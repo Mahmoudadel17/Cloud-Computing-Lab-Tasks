@@ -1,7 +1,6 @@
 package com.example.cloud
 
 import android.util.Log
-import android.widget.Toast
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -64,7 +63,7 @@ fun NotificationsScreen() {
         })
 
         items(allNotifications){
-            NotificationView(title = it.title!!, message = it.message!!)
+            NotificationView(title = it.title!!, message = it.message!!,dateTime = it.date_time!!)
         }
     }
 }
