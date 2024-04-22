@@ -15,6 +15,9 @@ firebaseMessaging = "23.4.1"
 lottieAnimation = "6.1.0"
 firebaseDatabase = "20.3.1"
 composeNavigationVersion = "2.7.7"
+firebaseFirestore = "24.11.1"
+firebaseStorage = "20.3.0"
+coilVersion = "2.6.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -38,8 +41,9 @@ firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging
 lottie-compose = { group = "com.airbnb.android", name = "lottie-compose", version.ref = "lottieAnimation" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "composeNavigationVersion" }
-
-
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
+firebase-storage = { group = "com.google.firebase", name = "firebase-storage", version.ref = "firebaseStorage" }
+coil = {group = "io.coil-kt",name = "coil-compose",version.ref = "coilVersion"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

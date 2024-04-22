@@ -1,4 +1,4 @@
-    package com.example.cloud
+    package com.example.cloud.utility
 
     import android.app.NotificationChannel
     import android.app.NotificationManager
@@ -6,12 +6,12 @@
     import android.content.Context
     import android.content.Intent
     import android.util.Log
-    import android.widget.Toast
     import androidx.core.app.NotificationCompat
+    import com.example.cloud.MainActivity
+    import com.example.cloud.R
     import com.example.cloud.components.Constants
     import com.example.cloud.components.Notification
     import com.google.firebase.Firebase
-    import com.google.firebase.database.DatabaseReference
     import com.google.firebase.database.database
     import com.google.firebase.messaging.FirebaseMessagingService
     import com.google.firebase.messaging.RemoteMessage
@@ -61,7 +61,7 @@
         private fun createNotification(title:String, message:String){
 
             // make intent to open activity when user click on notification
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             // flag to make activity in the top of stack
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
 

@@ -1,4 +1,4 @@
-package com.example.cloud
+package com.example.cloud.home
 
 import android.util.Log
 import androidx.compose.foundation.layout.padding
@@ -62,8 +62,12 @@ fun NotificationsScreen() {
 
         })
 
-        items(allNotifications){
-            NotificationView(title = it.title!!, message = it.message!!,dateTime = it.date_time!!)
+        items(allNotifications){noti->
+            NotificationView(
+                title = if (noti.title==null)"no title" else noti.title
+                , message =if (noti.message==null)"no message" else noti.message
+                ,dateTime = if (noti.date_time==null)"no date time" else noti.date_time
+            )
         }
     }
 }

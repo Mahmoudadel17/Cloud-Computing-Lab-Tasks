@@ -3,6 +3,7 @@ package com.example.cloud.components
 
 
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
@@ -17,7 +18,8 @@ fun LottieAnimationShow(
     animationResId: Int,
     size:Int,
     padding:Int,
-    paddingBottom:Int
+    paddingBottom:Int,
+    onAnimationClick:()->Unit
 ) {
 
 
@@ -36,7 +38,12 @@ fun LottieAnimationShow(
     LottieAnimation(
         composition,
         progress,
-        modifier = Modifier.padding(top = padding.dp, bottom = paddingBottom.dp).size(size.dp),
+        modifier = Modifier
+            .padding(top = padding.dp, bottom = paddingBottom.dp)
+            .size(size.dp)
+            .clickable {
+                onAnimationClick()
+            },
     )
 
 

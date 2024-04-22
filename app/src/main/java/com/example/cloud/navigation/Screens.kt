@@ -5,6 +5,7 @@ sealed class Screens(val route:String){
 
     data object Home : Screens(route = "home")
     data object Notifications : Screens(route = "notifications")
+    data object Images : Screens(route = "images")
 
 
 }

@@ -62,13 +62,13 @@ fun NotificationView(
             )
             Text(text = message, color = Color(0xFFC9CBCC))
 
-//            dateTime?.let {
-//                Text(
-//                    text = dateTime,
-//                    modifier = Modifier
-//                        .padding(vertical = 8.dp)
-//                )
-//            }
+            dateTime?.let {
+                Text(
+                    text = dateTime,
+                    modifier = Modifier
+                        .padding(vertical = 8.dp)
+                )
+            }
 
         }
 
